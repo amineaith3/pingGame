@@ -103,3 +103,20 @@ a {
     text-decoration: none;
 
 }
+
+footer {
+    text-align: center;
+    color: aliceblue;
+    background-color: black;
+}
+
+.compil{
+    color: white;
+    font-style: italic;
+    text-decoration: none; /* Remove underline */
+}
+
+a:visited {
+    color: white;
+    text-decoration: dashed;
+}

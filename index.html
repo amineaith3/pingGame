@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Game</title>
+    <link rel="stylesheet" href="styles/pingpong.css">
+</head>
+
+<body>
+    <header>
+        <p class="ins"> A new <span class="ccg"> <a class="ccg" target="_blank"
+                    href="https://beinsciences.org/compilcourtensaa/">Compil'Court</a></span> game<br> with a new
+            concept
+        </p> <br><br><br>
+        <p class="text_2"><br>
+            The main goal of this game is to <span class="span">change the color</span>
+            of the whole pieces, from red to blue<br>
+            Touching one piece, changes the colors of the 3,5 or 8 pieces around it.<br>
+            <br>
+        </p>
+        <br>
+        <br>
+        <br>
+    </header>
+    <main>
+        <div class="container">
+            <input type="s" id="a1" readonly onclick="touch_a1();win()">
+            <input id="a2" readonly onclick="touch_a2();win()">
+            <input id="a3" readonly onclick="touch_a3();win()">
+            <input id="a4" readonly onclick="touch_a4();win()">
+            <input id="a5" readonly onclick="touch_a5();win()">
+            <input id="a6" readonly onclick="touch_a6();win()">
+            <br>
+            <input id="b1" readonly onclick="touch_b1();win()">
+            <input id="b2" readonly onclick="touch_b2();win()">
+            <input id="b3" readonly onclick="touch_b3();win()">
+            <input id="b4" readonly onclick="touch_b4();win()">
+            <input id="b5" readonly onclick="touch_b5();win()">
+            <input id="b6" readonly onclick="touch_b6();win()">
+            <br>
+            <input id="c1" readonly onclick="touch_c1();win()">
+            <input id="c2" readonly onclick="touch_c2();win()">
+            <input id="c3" readonly onclick="touch_c3();win()">
+            <input id="c4" readonly onclick="touch_c4();win()">
+            <input id="c5" readonly onclick="touch_c5();win()">
+            <input id="c6" readonly onclick="touch_c6();win()">
+            <br>
+            <input id="d1" readonly onclick="touch_d1();win()">
+            <input id="d2" readonly onclick="touch_d2();win()">
+            <input id="d3" readonly onclick="touch_d3();win()">
+            <input id="d4" readonly onclick="touch_d4();win()">
+            <input id="d5" readonly onclick="touch_d5();win()">
+            <input id="d6" readonly onclick="touch_d6();win()">
+            <br>
+            <input id="e1" readonly onclick="touch_e1();win()">
+            <input id="e2" readonly onclick="touch_e2();win()">
+            <input id="e3" readonly onclick="touch_e3();win()">
+            <input id="e4" readonly onclick="touch_e4();win()">
+            <input id="e5" readonly onclick="touch_e5();win()">
+            <input id="e6" readonly onclick="touch_e6();win()">
+            <br>
+            <input id="f1" readonly onclick="touch_f1();win()">
+            <input id="f2" readonly onclick="touch_f2();win()">
+            <input id="f3" readonly onclick="touch_f3();win()">
+            <input id="f4" readonly onclick="touch_f4();win()">
+            <input id="f5" readonly onclick="touch_f5();win()">
+            <input id="f6" readonly onclick="touch_f6();win()">
+            <br><br><br>
+            <button type="button" class="restarter" onclick="location.reload()">RESTART</button>
+            <br><br><br>
+
+            <a class="links" href="https://compilcourt.w3spaces.com/big_linker/main_page.html" target="_blank">Return to
+                main page</a>
+            <br><br>
+    </main>
+    <script src="scripts/pingpong.js"></script>
+    <footer>
+        &copy;2022 <span onclick="info()">#AAH</span> <a class="compil" target="_blank"
+            href="https://beinsciences.org/compilcourtensaa/">Compil'Court.</a>
+    </footer>
+</body>
+
+</html>

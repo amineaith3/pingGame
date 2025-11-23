@@ -1,3 +1,18 @@
+// THEME SWITCH
+document.getElementById("themeToggle").onclick = () => {
+    const html = document.documentElement;
+
+    if (html.classList.contains("dark")) {
+        html.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+    } else {
+        html.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+    }
+};
+
+
+
 // --- GAME STATE ---
 const ROWS = 6;
 const COLS = 6;
@@ -14,12 +29,21 @@ function toggleCell(r, c) {
     if (r < 0 || r >= ROWS || c < 0 || c >= COLS) return;
 
     const index = idx(r, c);
-    const id = String.fromCharCode(97 + r) + (c + 1);  // a1..f6
+    const id = String.fromCharCode(97 + r) + (c + 1);
+    const mode = document.documentElement.classList.contains("dark");
 
     flag[index] = flag[index] ? 0 : 1;
+
+    // Black in both modes → stays black
+    // OFF = grey (light) or dark grey (dark mode)
     document.getElementById(id).style.backgroundColor =
-        flag[index] ? "black" : "grey";
+        flag[index]
+            ? "black"
+            : mode
+                ? "#4b5563"  // dark grey
+                : "#9ca3af"; // light grey
 }
+
 
 // toggle cell + neighbors (8 directions)
 function handleTouch(r, c) {
@@ -83,8 +107,8 @@ window.onload = () => {
 
             const cell = document.createElement("div");
             cell.id = id;
-            cell.className =
-                "w-12 h-12 bg-gray-400 rounded cursor-pointer hover:opacity-80";
+            cell.className = "w-12 h-12 bg-gray-400 dark:bg-gray-600 rounded cursor-pointer hover:opacity-80 transition";
+
             
             cell.onclick = () => handleTouch(r, c);
 
@@ -92,5 +116,6 @@ window.onload = () => {
         }
     }
 };
+
 
 

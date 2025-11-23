@@ -1,17 +1,20 @@
 // THEME SWITCH
-document.getElementById("themeToggle").onclick = () => {
-    const html = document.documentElement;
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("themeToggle");
 
-    if (html.classList.contains("dark")) {
-        html.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-    } else {
-        html.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-    }
-};
+    btn.onclick = () => {
+        const html = document.documentElement;
 
-
+        // toggle class
+        if (html.classList.contains("dark")) {
+            html.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        } else {
+            html.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        }
+    };
+});
 
 // --- GAME STATE ---
 const ROWS = 6;
@@ -116,6 +119,7 @@ window.onload = () => {
         }
     }
 };
+
 
 
 

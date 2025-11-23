@@ -24,7 +24,6 @@ function toggleCell(r, c) {
 // toggle cell + neighbors (8 directions)
 function handleTouch(r, c) {
     const dirs = [
-        [0, 0],   // itself
         [-1, 0],  // up
         [1, 0],   // down
         [0, -1],  // left
@@ -93,4 +92,5 @@ window.onload = () => {
         }
     }
 };
+
 

@@ -74,6 +74,23 @@ function info() {
 function returner() {
     window.location.href = "https://compilcourt.w3spaces.com/big_linker/main_page.html";
 }
+// Auto-generate the 6×6 grid
+window.onload = () => {
+    const grid = document.getElementById("grid");
 
-// run setup once the page loads
-window.onload = setup;
+    for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+            const id = String.fromCharCode(97 + r) + (c + 1); // a1..f6
+
+            const cell = document.createElement("div");
+            cell.id = id;
+            cell.className =
+                "w-12 h-12 bg-gray-400 rounded cursor-pointer hover:opacity-80";
+            
+            cell.onclick = () => handleTouch(r, c);
+
+            grid.appendChild(cell);
+        }
+    }
+};
+

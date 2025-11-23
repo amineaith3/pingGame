@@ -6,73 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping Game</title>
-    <link rel="stylesheet" href="pinggame.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header>
-        <p class="ins"> A new game<br> with a new
-            concept
-        </p> <br><br><br>
-        <p class="text_2"><br>
-            The main goal of this game is to <span class="span">change the color</span>
-            of the whole pieces, from grey to black<br>
-            Touching one piece, changes the colors of the 3,5 or 8 possible pieces around it.<br>
-            <br>
-        </p>
-        <br>
-    </header>
-    <main>
-        <div class="container">
-            <input type="s" id="a1" readonly onclick="touch_a1();win()">
-            <input id="a2" readonly onclick="touch_a2();win()">
-            <input id="a3" readonly onclick="touch_a3();win()">
-            <input id="a4" readonly onclick="touch_a4();win()">
-            <input id="a5" readonly onclick="touch_a5();win()">
-            <input id="a6" readonly onclick="touch_a6();win()">
-            <br>
-            <input id="b1" readonly onclick="touch_b1();win()">
-            <input id="b2" readonly onclick="touch_b2();win()">
-            <input id="b3" readonly onclick="touch_b3();win()">
-            <input id="b4" readonly onclick="touch_b4();win()">
-            <input id="b5" readonly onclick="touch_b5();win()">
-            <input id="b6" readonly onclick="touch_b6();win()">
-            <br>
-            <input id="c1" readonly onclick="touch_c1();win()">
-            <input id="c2" readonly onclick="touch_c2();win()">
-            <input id="c3" readonly onclick="touch_c3();win()">
-            <input id="c4" readonly onclick="touch_c4();win()">
-            <input id="c5" readonly onclick="touch_c5();win()">
-            <input id="c6" readonly onclick="touch_c6();win()">
-            <br>
-            <input id="d1" readonly onclick="touch_d1();win()">
-            <input id="d2" readonly onclick="touch_d2();win()">
-            <input id="d3" readonly onclick="touch_d3();win()">
-            <input id="d4" readonly onclick="touch_d4();win()">
-            <input id="d5" readonly onclick="touch_d5();win()">
-            <input id="d6" readonly onclick="touch_d6();win()">
-            <br>
-            <input id="e1" readonly onclick="touch_e1();win()">
-            <input id="e2" readonly onclick="touch_e2();win()">
-            <input id="e3" readonly onclick="touch_e3();win()">
-            <input id="e4" readonly onclick="touch_e4();win()">
-            <input id="e5" readonly onclick="touch_e5();win()">
-            <input id="e6" readonly onclick="touch_e6();win()">
-            <br>
-            <input id="f1" readonly onclick="touch_f1();win()">
-            <input id="f2" readonly onclick="touch_f2();win()">
-            <input id="f3" readonly onclick="touch_f3();win()">
-            <input id="f4" readonly onclick="touch_f4();win()">
-            <input id="f5" readonly onclick="touch_f5();win()">
-            <input id="f6" readonly onclick="touch_f6();win()">
-            <br><br><br>
-            <button type="button" class="restarter" onclick="location.reload()">RESTART</button>
-            <br><br>
-    </main>
-    <script src="pinggame.js"></script>
-    <footer>
-         <span>&copy;2024</span>. <a class="compil" target="_blank" href="https://amineaithamma.vercel.app">Amine Ait Hamma</a>
-    </footer>
-</body>
+<body class="bg-gray-200 min-h-screen flex flex-col">
 
+    <header class="text-center pt-10 px-4">
+        <p class="text-2xl font-semibold">
+            A new game<br> with a new concept
+        </p>
+
+        <p class="text-lg mt-8">
+            The goal is to <span class="font-bold text-black">turn all the pieces black</span>.<br>
+            Clicking a piece toggles **that piece + the surrounding ones**.
+        </p>
+    </header>
+
+    <main class="flex flex-col items-center mt-10">
+
+        <!-- 6x6 GRID -->
+        <div id="grid"
+            class="grid grid-cols-6 gap-2">
+        </div>
+
+        <button onclick="location.reload()"
+                class="mt-10 px-6 py-2 bg-gray-300 rounded hover:bg-gray-400">
+            RESTART
+        </button>
+    </main>
+
+    <footer class="text-center mt-auto py-4 bg-gray-200">
+        <span>&copy;2024</span>.
+        <a class="italic text-black" target="_blank" href="https://amineaithamma.vercel.app">
+            Amine Ait Hamma
+        </a>
+    </footer>
+
+    <script src="pinggame.js"></script>
+
+</body>
 </html>

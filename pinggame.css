@@ -68,7 +68,6 @@ a:visited {
     color: blue;
     text-decoration: none;
 }
-
 footer {
     text-align: center;
     color: aliceblue;
@@ -122,4 +121,5 @@ footer {
 a:visited {
     color: white;
     text-decoration: dashed;
+
 }
